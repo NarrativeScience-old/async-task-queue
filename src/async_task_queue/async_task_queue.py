@@ -26,6 +26,7 @@ class AsyncTask:
             self.result = e
 
     def __repr__(self) -> str:
+        """Object representation for debugging"""
         return render(self, treelike_whitelist=(AsyncTask,))
 
 
@@ -259,4 +260,5 @@ class AsyncTaskQueue:
             self._enqueue([task], queue=self.succeeded_tasks)
 
     def __repr__(self) -> str:
+        """Object representation for debugging"""
         return render(self, treelike_whitelist=(AsyncTaskQueue,))

@@ -1,7 +1,8 @@
+"""Module for rendering output of python objects"""
+
 import inspect
 from typing import Any, Callable, Dict, Set, Tuple, Type
 from unittest.mock import Mock
-
 
 COLOR_CODES = {
     "blue": "\033[94m",
@@ -81,7 +82,8 @@ def _render(
         level: The level in the tree at which the `obj` is rendered.
         indent: What represents a single indentation.
         treelike_whitelist: Classes to render in a tree-like fashion.
-        attr_blacklist: attributes to exclude
+        treelike_blacklist: Classes to render with the typename only.
+        attr_blacklist: Attributes to exclude from rendering
         renderer_overrides: a mapping from classes to functions that should be used
             to render those classes. The function should take an instance of the class
             and return the rendered string
@@ -166,6 +168,7 @@ def _get_default_arguments(obj: Any) -> Set[str]:
 
     Returns:
         the set of default arguments
+
     """
     cls = type(obj)
     obj_sig = inspect.signature(cls.__init__)
@@ -200,7 +203,6 @@ def render(
     """Render any object in tree form.
 
     Example:
-
         Class(
             arg1=val1,
             arg2=[
@@ -217,8 +219,8 @@ def render(
         indent: What represents a single indentation.
         treelike_whitelist: Classes to render in a tree-like fashion.
         treelike_blacklist: Classes to render with the typename only.
-        attr_blacklist: attributes to exclude
-        renderer_overrides: a mapping from classes to functions that should be used
+        attr_blacklist: Attributes to exclude from rendering
+        renderer_overrides: A mapping from classes to functions that should be used
             to render those classes. The function should take an instance of the class
             and return the rendered string
 

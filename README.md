@@ -51,7 +51,7 @@ task_queue = AsyncTaskQueue(
 # Add async tasks to the queue
 task_queue.enqueue(
     [
-        AsyncTask(some_coroutine, arg) for arg in some_args
+        AsyncTask(some_coroutine, *args, **kwargs) for args, kwargs in some_args_kwargs
     ]
 )
 
