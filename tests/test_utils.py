@@ -1,7 +1,8 @@
 """Contains test utilities"""
 
 import asyncio
-from typing import Any, Callable
+from typing import Callable
+from unittest.mock import MagicMock
 
 
 def async_test(async_test_func: Callable[..., None]) -> Callable[..., None]:
