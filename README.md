@@ -1,6 +1,6 @@
 # async-task-qeue
 
-[![CircleCI](https://circleci.com/gh/NarrativeScience/async-task-queue/tree/master.svg?style=shield)](https://circleci.com/gh/NarrativeScience/async-task-queue/tree/master)[![](https://img.shields.io/pypi/v/async-task-queue.svg)](https://pypi.org/pypi/async-task-queue/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![CircleCI](https://circleci.com/gh/NarrativeScience/async-task-queue/tree/master.svg?style=shield)](https://circleci.com/gh/NarrativeScience/async-task-queue/tree/master) [![](https://img.shields.io/pypi/v/async-task-queue.svg)](https://pypi.org/pypi/async-task-queue/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 In-memory FIFO queue for concurrent task execution. Used to execute tasks concurrently with optional control (via semaphore) over the max number of tasks running at the same time.
 
