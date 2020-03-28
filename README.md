@@ -1,4 +1,4 @@
-# async-task-qeue
+# async-task-queue
 
 [![CircleCI](https://circleci.com/gh/NarrativeScience/async-task-queue/tree/master.svg?style=shield)](https://circleci.com/gh/NarrativeScience/async-task-queue/tree/master)[![](https://img.shields.io/pypi/v/async-task-queue.svg)](https://pypi.org/pypi/async-task-queue/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
