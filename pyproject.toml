@@ -4,6 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
 module = "async_task_queue"
+dist-name = "async-task-queue"
 author = "Celestine Kao"
 author-email = "ckao@narrativescience.com"
 home-page = "https://github.com/NarrativeScience/async-task-queue"
